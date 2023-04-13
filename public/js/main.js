@@ -1,10 +1,6 @@
 const CACHE_KEY = "mostRecentRecord";
 const DELAY_INTERVAL = 5000;
 
-// const Airtable = require('airtable');
-// const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
-// const tableId = 'tblKl1yEoaQWmCXYJ';
-
 let mostRecentRecord = null;
 let interval = null;
 
