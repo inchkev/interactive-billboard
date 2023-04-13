@@ -1,25 +1,39 @@
 const CACHE_KEY = "mostRecentRecord";
 const DELAY_INTERVAL = 5000;
 
-const Airtable = require('airtable');
-const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
-const tableId = 'tblKl1yEoaQWmCXYJ';
+// const Airtable = require('airtable');
+// const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
+// const tableId = 'tblKl1yEoaQWmCXYJ';
 
 let mostRecentRecord = null;
 let interval = null;
 
+async function getFirstPage(data = {}) {
+  const response = await fetch('/get-first-page', {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+
 function getMostRecentRecord() {
-  base(tableId).select({
+  getFirstPage({
     maxRecords: 1,
     sort: [{field: "created", direction: "desc"}],
-  }).firstPage((err, records) => {
-    if (err) { console.error(err); return; }
+  }).then(response => {
+    if (response.err) {
+      console.error(response.err);
+      return;
+    }
 
-    records.forEach((record) => {
+    response.records.forEach((record) => {
       console.log(record.fields);
     });
 
-    mostRecentRecord = records[0].fields;
+    mostRecentRecord = response.records[0].fields;
     const recordCreated = new Date(mostRecentRecord.created).getTime();
     const now = Date.now();
     const wait = DELAY_INTERVAL - (now - recordCreated);

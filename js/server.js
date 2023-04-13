@@ -22,6 +22,15 @@ app.post('/submit', (req, res) => {
   });
 });
 
+app.post('/get-first-page', (req, res) => {
+  console.log(req.body);
+  base('tblKl1yEoaQWmCXYJ').select(req.body).firstPage(
+    function(err, records) {
+      res.send({err: err, records: records});
+    }
+  )
+});
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`)

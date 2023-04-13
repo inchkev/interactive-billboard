@@ -192,8 +192,7 @@ form.addEventListener('submit', (event) => {
     q4time: q4info.time / 1000,
     q5time: q5info.time / 1000,
     q6time: q6info.time / 1000
-  })
-  .then(response => {
+  }).then(response => {
     if (response.err) {
       console.error(response.err);
       return;
