@@ -1,0 +1,13 @@
+{
+  "name": "billboard",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
