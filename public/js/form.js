@@ -9,7 +9,7 @@ form.afterwards.addEventListener("change", checkForm);
 const loadTime = Date.now();
 
 // const GATE_COLORS = ['#000000', '#dee335', '#98D185', '#EABD8B', '#F7DB50', '#93D4EB'];
-const GATE_COLORS = ['#000000', '#c0ce1c', '#7ce359', '#edb26e', '#ffe047', '#5fc7ec'];
+const GATE_COLORS = ['#000000', '#c0ce1c', '#7ce359', '#ea8357', '#ffe047', '#5fc7ec'];
 
 var q1info = {time: 0};
 var q2info = {time: 0};
