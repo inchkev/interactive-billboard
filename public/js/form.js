@@ -1,4 +1,11 @@
 const form = document.querySelector('form');
+form.feeling.addEventListener("change", checkForm);
+form.letGo.addEventListener("change", checkForm);
+form.gain.addEventListener("change", checkForm);
+form.keep.addEventListener("change", checkForm);
+form.passThrough.addEventListener("change", checkForm);
+form.afterwards.addEventListener("change", checkForm);
+
 const loadTime = Date.now();
 
 const GATE_COLORS = ['#000000', '#D7DB61', '#98D185', '#EABD8B', '#F7DB50', '#93D4EB'];
@@ -197,6 +204,31 @@ form.addEventListener('submit', (event) => {
       console.error(response.err);
       return;
     }
+    // console.log(response.record.fields.id);
     console.log(`Created record with ID ${response.record.id}`);
+
+    // $("#intro, form").hide();
+    $(".number").text(response.record.fields.id);
+    $("#intro, form").fadeOut("normal", function() {
+      $("#confirm").fadeIn("fast");
+    });
   });
 });
+
+function checkForm() {
+  // check if all select elements have a non-default value
+  if (
+    form.feeling.value &&
+    form.letGo.value &&
+    form.gain.value &&
+    form.keep.value &&
+    form.passThrough.value &&
+    form.afterwards.value
+  ) {
+    // enable the submit button
+    form.submit.disabled = false;
+  } else {
+    // disable the submit button
+    form.submit.disabled = false;
+  }
+}

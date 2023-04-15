@@ -31,8 +31,10 @@ body {
 
 #gate {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-template-rows: 1.1fr 1fr 1fr 1fr;
   grid-template-areas: 
     "top  top top  top"
     "lcol  _   _  rcol"
@@ -49,6 +51,7 @@ body {
 
 .cell.top {
   grid-area: top;
+  text-align: center;
 }
 
 .cell.lcol {
@@ -70,4 +73,28 @@ body {
 .cell._ {
   grid-area: _;
   background-color: black;
+}
+
+#top, #column, #base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  filter: brightness(0);
+  transition: background-color 2s ease-in-out;
+}
+
+#number{
+  display: inline-block;
+  color: black;
+	font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 13em;
+  margin: 0;
+  margin-top: 0.1em;
+  letter-spacing: -0.01em;
+  /* position: absolute; */
 }

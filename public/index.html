@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html> 
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Billboard project</title>
     <meta name="author" content="Kevin Chen, Saskia Globig">
 
     <link rel="icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Libre+Baskerville:ital@0;1&family=Schibsted+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
   </head>
 
   <body>
@@ -16,32 +19,105 @@
     </header>
 
     <main>
-      <div class="gate-container">
-        <div class="gate-square">
-          <div id="gate">
-            <div class="cell top"></div>
-            <div class="cell top"></div>
-            <div class="cell top"></div>
-            <div class="cell top"></div>
-            <div class="cell lcol"></div>
-            <div class="cell _"></div>
-            <div class="cell _"></div>
-            <div class="cell rcol"></div>
-            <div class="cell lcol"></div>
-            <div class="cell _"></div>
-            <div class="cell _"></div>
-            <div class="cell rcol"></div>
-            <div class="cell lbase"></div>
-            <div class="cell _"></div>
-            <div class="cell _"></div>
-            <div class="cell rbase"></div>
-          </div>
-        </div>
+      <div id="intro">
+        Want to take a step in your life?
+        <br><br>
+        We can lend you a symbol for your journey. All you have to do is answer the questions.
+        <br><br>
       </div>
-      Hello!
+      <form>
+        <label for="feeling">How are you right now?</label>
+        <br>
+        <select id="feeling" name="feeling">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Woolen</option>
+          <option value="2">Silken</option>
+          <option value="3">Cottony</option>
+          <option value="4">Linen</option>
+          <option value="5">Plasticky</option>
+        </select>
+        <br>
+        <br>
+      
+        <label for="letGo">What would you like to let go?</label>
+        <br>
+        <select id="letGo" name="letGo">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Aches</option>
+          <option value="2">Dry skin</option>
+          <option value="3">Smelly armpits</option>
+          <option value="4">The tear in your eye</option>
+          <option value="5">Nearsightedness</option>
+        </select>
+        <br>
+        <br>
+      
+        <label for="gain">What would you like to gain?</label>
+        <br>
+        <select id="gain" name="gain">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Balloon</option>
+          <option value="2">Balcony</option>
+          <option value="3">Baton</option>
+          <option value="4">Basket</option>
+          <option value="5">Big Mac</option>
+        </select>
+        <br>
+        <br>
+      
+        <label for="keep">What would you like to keep?</label>
+        <br>
+        <select id="keep" name="keep">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Coincidences</option>
+          <option value="2">Missed connections</option>
+          <option value="3">Acceptance of failure</option>
+          <option value="4">Anticipations</option>
+          <option value="5">An understanding of having learned something</option>
+        </select>
+        <br>
+        <br>
+      
+        <label for="passThrough">Where would you like to pass through, or into?</label>
+        <br>
+        <select id="passThrough" name="passThrough">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Swamp</option>
+          <option value="2">Grassy plain</option>
+          <option value="3">Canyon</option>
+          <option value="4">Sand dune</option>
+          <option value="5">River</option>
+        </select>
+        <br>
+        <br>
+      
+        <label for="afterwards">How do you imagine yourself being afterwards?</label>
+        <br>
+        <select id="afterwards" name="afterwards">
+          <option value="" selected disabled>. . .</option>
+          <option value="1">Bright</option>
+          <option value="2">Overcast</option>
+          <option value="3">Scuttling clouds</option>
+          <option value="4">Slanted rays</option>
+          <option value="5">Torrential rain</option>
+        </select>
+      
+        <br>
+        <br>
+        <br>
+        <br>
+        <input id="submit" type="submit" value="Submit" disabled>
+        <br>
+        <br>
+      </form>
+      <div id="confirm" style="display: none;">
+        <p>Thank you. You are</p>
+        <p class="number"></p>
+        <p>Remember to take your receipt.</p>
+      </div>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" type="text/javascript"></script>
-    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>

@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background-color: skyblue;
+  animation-name: fade;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {
+    background-color: skyblue;
+  }
+  25%{
+  	background-color: deepskyblue;
+  }
+  50%{
+		background-color: darkblue;
+  }
+  75%{
+  	background-color: lightskyblue;
+  }
+  100% {
+    background-color: whitesmoke;
+  }
+}
+
+form {
+	color: black;
+  /* width: 100%; */
+	font-size: 26px;
+  line-height: 30px;
+	font-family: 'Schibsted Grotesk', sans-serif;
+  padding: 20px;
+}
+
+#intro{
+	color: white;
+	font-size: 32px;
+	line-height: 38px;
+	padding: 20px;
+  padding-top: 50px;
+	font-family: 'Libre Baskerville', serif;
+	font-style: italic;
+}
+
+form select {
+	font-size: 26px;
+  line-height: 30px;
+  font-style: italic;
+  padding: none;
+  background-color: none;
+  color: white;
+  border: none;
+  /* border: 1.5px solid black; */
+  max-width: 90vw;
+  /* border-radius: 20px; */
+  animation-name: fade;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#gate-outline{
+	position: fixed;
+	top: 3.5em;
+	height: 65%;
+	z-index: -100;
+}
+
+#submit{
+	display: flex;
+  justify-content: center;
+  color: white;
+	font-size: 32px;
+	line-height: 38px;
+  font-style: italic;
+}
+input[type=submit]{
+	background-color: black;
+	color: lightskyblue;
+	padding: 0em;
+  border: none;
+	/* border: 1.5px solid white;
+	border-radius: 120px; */
+	font-family: 'Libre Baskerville', serif;
+	/* font-size: 30px; */
+	/* box-shadow: 0; */
+  animation-name: fade;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+input[type=submit]:hover{
+	cursor: pointer;
+	}
+	a{
+		text-decoration: none;
+	}
+
+#submit:disabled {
+  opacity: 0.2;
+}
+
+#confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#confirm p {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+	font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+#confirm p.number {
+  font-style: normal;
+  font-size: 10em;
+  padding: 0;
+	font-family: 'Schibsted Grotesk', sans-serif;
+}

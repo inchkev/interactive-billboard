@@ -49,6 +49,7 @@ function getMostRecentRecord() {
 }
 
 function displayGate(record) {
+  const id = record.id;
   const q1 = record.q1;
   const q2 = record.q2;
   const q3 = record.q3;
@@ -66,6 +67,12 @@ function displayGate(record) {
 
   const gateDiv = document.getElementById('gate');
   gateDiv.style.backgroundColor = color;
+
+  $('#top img').attr('src', `gate/top-${q1}.svg`);
+  $('#column img').attr('src', `gate/column-${q3}.svg`);
+  $('#base img').attr('src', `gate/base-${q2}.svg`);
+
+  $("#number").text(id);
 }
 
 
