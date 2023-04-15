@@ -229,6 +229,6 @@ function checkForm() {
     form.submit.disabled = false;
   } else {
     // disable the submit button
-    form.submit.disabled = false;
+    form.submit.disabled = true;
   }
 }
