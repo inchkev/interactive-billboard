@@ -177,7 +177,7 @@ form.addEventListener('submit', (event) => {
 
   var color = GATE_COLORS[passThroughIndex];
   if (passThroughIndex > 0) {
-    color = jitterColor(color, 15);
+    color = jitterColor(color, 9);
   }
   console.log(`Color: ${color}`);
 
