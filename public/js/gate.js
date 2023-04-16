@@ -72,7 +72,8 @@ function displayGate(record) {
   $('#column img').attr('src', `gate/column-${q3}.svg`);
   $('#base img').attr('src', `gate/base-${q2}.svg`);
 
-  $("#number").text(id);
+  $("#number1").text(id);
+  // $("#number2").text(id);
 }
 
 

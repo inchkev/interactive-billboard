@@ -32,9 +32,9 @@ body {
 #gate {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: 1.25fr 1fr 1fr 1.25fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
   /* grid-template-rows: repeat(4, 1fr); */
-  grid-template-rows: 1.25fr 1fr 1fr 1fr;
+  grid-template-rows: 1.20fr 1fr 1fr 1fr;
   grid-template-areas: 
     "top  top top  top"
     "lcol  _   _  rcol"
@@ -88,7 +88,7 @@ img {
   transition: background-color 2s ease-in-out;
 }
 
-#number{
+#number1{
   display: inline-block;
   color: black;
 	font-family: 'Schibsted Grotesk', sans-serif;
@@ -98,3 +98,18 @@ img {
   letter-spacing: -0.01em;
   /* position: absolute; */
 }
+
+/* #number2{
+  display: inline-block;
+  color: black;
+	font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 13em;
+  margin: 0;
+  margin-top: 0.1em;
+  letter-spacing: -0.01em;
+  position: absolute;
+  transform: scale(-1, 1);
+  color: black;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+} */
