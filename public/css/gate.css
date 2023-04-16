@@ -52,6 +52,8 @@ body {
 .cell.top {
   grid-area: top;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cell.lcol {
@@ -90,26 +92,33 @@ img {
 
 #number1{
   display: inline-block;
+  display: inline;
   color: black;
 	font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 13em;
   margin: 0;
   margin-top: 0.1em;
+  padding-bottom: 0;
+  /* margin-right: 1em; */
   letter-spacing: -0.01em;
+  margin-left: 25px;
   /* position: absolute; */
 }
 
-/* #number2{
+#number2{
   display: inline-block;
+  display: inline;
   color: black;
 	font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 13em;
   margin: 0;
+  padding-bottom: 0;
   margin-top: 0.1em;
+  margin-right: 25px;
   letter-spacing: -0.01em;
-  position: absolute;
+  /* position: absolute; */
   transform: scale(-1, 1);
   color: black;
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
-} */
+}
